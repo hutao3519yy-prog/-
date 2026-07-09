@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FrameForge · Short Drama Poster Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700;900&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=20260707-light-style-cards" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#"><span class="brand-mark">F</span><span>FrameForge</span></a>
+    <div class="nav-center"><span class="step-dot active"></span>Poster Workspace</div>
+    <div id="modelStatus" class="status"><i></i> Checking model...</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">SHORT DRAMA POSTER STUDIO <span></span> GPT IMAGE WORKFLOW</div>
+      <h1>Turn a script into<br><em>a poster that stops the scroll.</em></h1>
+      <p>Upload the script and character references. FrameForge reads the conflict, cast dynamics, and visual tone, then prepares production-ready poster prompts and ChatGPT image packs.</p>
+      <div class="hero-meta"><span>01 Script Insight</span><span>02 Visual Direction</span><span>03 Character Lock</span><span>04 Poster Export</span></div>
+    </section>
+
+    <details class="update-log" aria-labelledby="updateLogTitle">
+      <summary class="update-log-summary">
+        <span class="kicker">UPDATE LOG</span>
+        <strong id="updateLogTitle">更新日志</strong>
+        <small>最近更新：风格卡片底部改为浅色玻璃浮层，点击查看全部记录</small>
+      </summary>
+      <div class="update-log-inner">
+        <div class="update-log-head">
+          <span class="kicker">UPDATE LOG</span>
+          <h2>更新日志</h2>
+          <p>记录每次调整解决的问题，方便测试、交接和回溯。</p>
+        </div>
+        <div class="update-log-list">
+          <article class="update-entry">
+            <time>2026-07-07 · v1.8</time>
+            <b>风格卡片色彩优化</b>
+            <p>底部信息层由深色遮罩改为浅色玻璃浮层，更贴合网站的简约高级色系。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-07 · v1.7</time>
+            <b>风格卡片紧凑化</b>
+            <p>风格卡片改为海报主体视觉与底部浮层，减少留白，让同类海报叠放更清晰。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-07 · v1.6</time>
+            <b>风格组叠放展开</b>
+            <p>同类风格海报合并为重叠图组，点击后展开参考图；海报改为完整展示，减少文字说明。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-07 · v1.5</time>
+            <b>真人实拍与标题安全区</b>
+            <p>移除 CG 渲染类画质词，改为 IMAX/Panavision 真人电影摄影约束；剧名完整外接框必须锁在标题安全区内。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-07 · v1.4</time>
+            <b>风格库重构</b>
+            <p>合并相近风格，新增“史诗暗黑奇幻”主视觉，风格选择改为可展开的视觉卡片，减少冗余。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-07 · v1.3</time>
+            <b>剧本解析修正</b>
+            <p>过滤“阶段三/###”等结构标题，顶部标签、视觉语言与构图执行改为依据当前上传剧本生成具体指令。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-07 · v1.2</time>
+            <b>画质与成对构图</b>
+            <p>强化超清画质约束，并将生成数量定义为构图方案数量，每个方案同时输出 9:16 与 3:4。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-07 · v1.1</time>
+            <b>提示词清理</b>
+            <p>移除 EP 徽标规则和后端排错话术，自动原创模式不再展示海报参考图，成图提示词只保留可执行指令。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-07 · v1.0</time>
+            <b>上下文隔离</b>
+            <p>资源包新增记忆隔离约束，要求 ChatGPT 忽略旧对话历史，只依据当前剧本、角色图和提示词生成。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-07 · v0.9</time>
+            <b>本地打包导出</b>
+            <p>资源包改为浏览器本地生成 ZIP，不再上传人物大图到服务器，降低公网隧道导出失败概率。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-07 · v0.8</time>
+            <b>用户自带 API</b>
+            <p>删除站长内置 API，新增 ChatGPT 手动/API 直连切换，API Key 改为用户手动填写。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-07 · v0.7</time>
+            <b>导出稳定性</b>
+            <p>修复资源包导出失败，提升文件数量与大小限制，并新增导出前体积检查。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-07 · v0.6</time>
+            <b>剧名识别</b>
+            <p>当剧本正文没有明确剧名时，自动使用上传文件名，避免误把正文短句识别成剧名。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-07 · v0.5</time>
+            <b>安全区规范</b>
+            <p>新增 3:4 安全区规范图，提示词与导出资源包同步包含 9:16 和 3:4 规则。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-07 · v0.4</time>
+            <b>UI 视觉升级</b>
+            <p>调整为更明亮的高级简约色系，加入点击反馈、切换动效和界面细节动效。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-06 · v0.3</time>
+            <b>角色匹配</b>
+            <p>支持按文件名匹配角色，修复卡片底部与导演提示词中的角色名不同步问题。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-06 · v0.2</time>
+            <b>ChatGPT 资源包</b>
+            <p>新增资源包导出与操作清单，方便把剧本分析、角色图和提示词一次性上传给 ChatGPT。</p>
+          </article>
+          <article class="update-entry">
+            <time>2026-07-06 · v0.1</time>
+            <b>初始流程</b>
+            <p>支持 Word 剧本上传、人物参考图导入、导演提示词生成，以及 9:16/3:4 海报输出。</p>
+          </article>
+        </div>
+      </div>
+    </details>
+
+    <section class="workspace">
+      <aside class="rail">
+        <button class="rail-step active" data-target="scriptPanel"><b>01</b><span>Script<small>Read story core</small></span></button>
+        <button class="rail-step" data-target="castPanel"><b>02</b><span>Cast<small>Bind references</small></span></button>
+        <button class="rail-step" data-target="directorPanel"><b>03</b><span>Director<small>Compose prompt</small></span></button>
+        <button class="rail-step" data-target="resultPanel"><b>04</b><span>Export<small>Review assets</small></span></button>
+      </aside>
+
+      <div class="studio">
+        <section id="scriptPanel" class="panel active-panel">
+          <div class="panel-head"><div><span class="kicker">STEP 01</span><h2>Read the Story First</h2><p>Upload a Word script. The studio extracts title, cast, conflict, and the strongest visual hook.</p></div><span class="number">01</span></div>
+          <div class="api-card">
+            <div>
+              <span class="kicker">GENERATION MODE</span>
+              <b>选择生成方式</b>
+              <p>默认使用 ChatGPT 手动生成包；如需直接调用 API，请填写你自己的 OpenAI API Key。</p>
+            </div>
+            <div class="api-controls">
+              <div class="api-toggle" role="group" aria-label="生成方式">
+                <button id="modeChatGpt" class="active" type="button">ChatGPT 手动</button>
+                <button id="modeApi" type="button">API 直连</button>
+              </div>
+              <label id="apiKeyField" class="api-key-field hidden"><span>OpenAI API Key</span><input id="apiKeyInput" type="password" autocomplete="off" placeholder="sk-..." /><button id="clearApiKey" class="secondary" type="button">清除</button></label>
+              <small id="apiModeHint">不会使用站长 API；导出资源包后在 ChatGPT 中生成。</small>
+            </div>
+          </div>
+          <label id="scriptDrop" class="dropzone">
+            <input id="scriptInput" type="file" accept=".doc,.docx" />
+            <div class="upload-icon">W</div>
+            <strong>拖入剧本，或点击选择文件</strong>
+            <span>支持 .docx / .doc · 单文件不超过 25MB</span>
+            <div id="scriptFile" class="file-pill hidden"></div>
+          </label>
+          <label class="field"><span>补充创作方向 <small>可选</small></span><textarea id="instruction" rows="3" placeholder="例如：更突出女主复仇线；同时尝试双人版和四人群像版……"></textarea></label>
+          <button id="analyzeBtn" class="primary">分析剧本 <span>→</span></button>
+        </section>
+
+        <section id="castPanel" class="panel">
+          <div class="panel-head"><div><span class="kicker">STEP 02</span><h2>Lock the Faces</h2><p>Upload character references. File names are treated as character names and can be corrected per card.</p></div><span class="number">02</span></div>
+          <div id="analysisSummary" class="story-card hidden"></div>
+          <form id="titleConfirm" class="title-confirm hidden">
+            <div>
+              <span class="kicker">TITLE CHECK</span>
+              <b>确认剧名是否正确</b>
+              <small>剧名会同步到提示词、导出压缩包和海报下载文件名。</small>
+            </div>
+            <div class="title-confirm-row">
+              <input id="titleInput" type="text" maxlength="32" placeholder="请输入正确剧名" />
+              <button class="secondary" type="submit">确认剧名</button>
+            </div>
+            <span id="titleConfirmStatus" class="title-confirm-status">请确认解析出的剧名。</span>
+          </form>
+          <div id="castGrid" class="cast-grid"></div>
+          <label class="cast-upload"><input id="castInput" type="file" multiple accept="image/png,image/jpeg,image/webp" /><span>＋</span><strong>添加人物参考图</strong><small>可多选，PNG / JPG / WebP</small></label>
+          <button id="toDirectorBtn" class="primary">Open Director Board <span>→</span></button>
+        </section>
+
+        <section id="directorPanel" class="panel">
+          <div class="panel-head"><div><span class="kicker">STEP 03</span><h2>Shape the First Glance</h2><p>The prompt stays editable while preserving character mapping, ratios, and safe-zone rules.</p></div><span class="number">03</span></div>
+          <div class="section-label"><span>01</span><div><b>Choose Visual Language</b><small>Use a preset mood or let the script create its own visual system</small></div></div>
+          <div id="styleLibrary" class="style-library"></div>
+          <div class="section-label"><span>02</span><div><b>Choose Character Layout</b><small>Let AI decide or lock the composition manually</small></div></div>
+          <div class="mode-grid">
+            <button class="mode active" data-mode="auto"><b>AI 自动判断</b><span>根据故事关系选择最佳阵容</span></button>
+            <button class="mode" data-mode="duo"><b>双人张力</b><span>聚焦两位核心人物</span></button>
+            <button class="mode" data-mode="ensemble"><b>多人群像</b><span>强化阵营与关系冲突</span></button>
+          </div>
+          <div class="safe-card"><div class="safe-guides"><img class="safe-guide" src="/assets/poster-safe-zone.png" alt="9:16 平台海报安全区规范"><img class="safe-guide safe-guide-3x4" src="/assets/poster-safe-zone-3x4.png" alt="3:4 平台海报安全区规范"></div><div><b>9:16 / 3:4 裁切规范已锁定</b><p>封面信息区 15.6%–78.0%，数据区 78.0%–87.2%；人物面部、剧名与核心情绪不会落入顶部、底部图片裁切区。</p></div><span class="lock">LOCKED</span></div>
+          <label class="field prompt-field"><span>导演提示词 <small>可编辑</small></span><textarea id="prompt" rows="14"></textarea><button id="copyPrompt" class="copy">复制</button></label>
+          <div class="chatgpt-card">
+            <div><b>ChatGPT 手动生成</b><p>复制完整生成包，在 ChatGPT 上传人物图后粘贴使用。</p></div>
+            <div class="chatgpt-actions"><button id="copyChatGpt" class="secondary" type="button">复制生成包</button><button id="exportChatGpt" class="secondary" type="button">导出资源包</button><a id="openChatGpt" class="primary" href="https://chatgpt.com/" target="_blank" rel="noopener">打开 ChatGPT <span>↗</span></a></div>
+          </div>
+          <div id="chatGptChecklist" class="checklist-card hidden"></div>
+          <div class="generate-bar"><label>生成数量<select id="variants"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></label><button id="generateBtn" class="primary">生成海报 <span>✦</span></button></div>
+        </section>
+
+        <section id="resultPanel" class="panel">
+          <div class="panel-head"><div><span class="kicker">STEP 04</span><h2>Poster Review</h2><p>Download generated versions or return to the director board.</p></div><span class="number">04</span></div>
+          <div id="resultGrid" class="result-grid"></div>
+          <button class="secondary" data-back="directorPanel">← 返回调整提示词</button>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <div id="loading" class="loading hidden"><div class="loader"></div><strong id="loadingTitle">AI 正在阅读剧本</strong><span id="loadingSub">寻找故事中最有力量的那一帧…</span></div>
+  <script src="/vendor/jszip.min.js?v=3.10.1"></script>
+  <script src="/app.js?v=20260707-light-style-cards" type="module"></script>
+</body>
+</html>
