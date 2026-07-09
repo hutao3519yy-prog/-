@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+uploads/
+.DS_Store
+.pnpm-store/
+album-diary-app/
+test/
+npm-debug.log*
