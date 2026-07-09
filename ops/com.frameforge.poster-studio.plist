@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.frameforge.poster-studio</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/apple/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node</string>
+    <string>/Users/apple/Documents/短剧海报项目/scripts/start-server.mjs</string>
+    <string>/Users/apple/Documents/短剧海报项目/server.js</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/apple/Documents/短剧海报项目</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>HOST</key>
+    <string>0.0.0.0</string>
+    <key>PORT</key>
+    <string>3001</string>
+    <key>NODE_ENV</key>
+    <string>production</string>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>KeepAlive</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/apple/Documents/短剧海报项目/logs/poster-studio.out.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/apple/Documents/短剧海报项目/logs/poster-studio.err.log</string>
+</dict>
+</plist>
